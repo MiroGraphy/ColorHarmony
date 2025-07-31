@@ -58,12 +58,28 @@ De applicatie draait op `http://localhost:5000`
 
 ## Deployment
 
-### GitHub Pages
+### GitHub Pages (Aanbevolen voor Demo)
 1. Fork deze repository
 2. Ga naar Settings > Pages
 3. Selecteer "GitHub Actions" als source
-4. Voeg je `OPENAI_API_KEY` toe aan repository secrets
-5. Push naar main branch voor automatische deployment
+4. Push naar main branch voor automatische deployment
+5. Je app wordt beschikbaar op: `https://jouwusername.github.io/repository-naam`
+
+**Voor lokale GitHub Pages build:**
+```bash
+node build-github-pages.js
+# Output in docs/ folder
+```
+
+### Docker (Volledige Stack)
+```bash
+# Met Docker Compose
+docker-compose up -d
+
+# Alleen Docker
+docker build -t resume-generator .
+docker run -p 5000:5000 -e OPENAI_API_KEY=jouw_key resume-generator
+```
 
 ### Eigen Server
 1. Build de applicatie: `npm run build`
