@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(350, 60%, 40%);
+  --primary-foreground: hsl(60, 9.1%, 97.8%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  /* Custom Burgundy Colors - Deep wine red */
+  --burgundy-50: hsl(350, 100%, 98%);
+  --burgundy-100: hsl(350, 80%, 95%);
+  --burgundy-200: hsl(350, 70%, 90%);
+  --burgundy-300: hsl(350, 60%, 80%);
+  --burgundy-400: hsl(350, 50%, 60%);
+  --burgundy-500: hsl(350, 60%, 40%);
+  --burgundy-600: hsl(350, 70%, 30%);
+  --burgundy-700: hsl(350, 80%, 25%);
+  --burgundy-800: hsl(350, 85%, 20%);
+  --burgundy-900: hsl(350, 90%, 15%);
+
+  /* Custom Gold Colors - Rich golden yellow */
+  --gold-50: hsl(45, 100%, 98%);
+  --gold-100: hsl(45, 100%, 95%);
+  --gold-200: hsl(45, 100%, 90%);
+  --gold-300: hsl(45, 95%, 80%);
+  --gold-400: hsl(45, 90%, 70%);
+  --gold-500: hsl(45, 85%, 60%);
+  --gold-600: hsl(45, 80%, 50%);
+  --gold-700: hsl(45, 75%, 40%);
+  --gold-800: hsl(45, 70%, 30%);
+  --gold-900: hsl(45, 65%, 20%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(350, 60%, 40%);
+  --primary-foreground: hsl(60, 9.1%, 97.8%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Burgundy utility classes */
+.text-burgundy-50 { color: var(--burgundy-50); }
+.text-burgundy-100 { color: var(--burgundy-100); }
+.text-burgundy-200 { color: var(--burgundy-200); }
+.text-burgundy-300 { color: var(--burgundy-300); }
+.text-burgundy-400 { color: var(--burgundy-400); }
+.text-burgundy-500 { color: var(--burgundy-500); }
+.text-burgundy-600 { color: var(--burgundy-600); }
+.text-burgundy-700 { color: var(--burgundy-700); }
+.text-burgundy-800 { color: var(--burgundy-800); }
+.text-burgundy-900 { color: var(--burgundy-900); }
+
+.bg-burgundy-50 { background-color: var(--burgundy-50); }
+.bg-burgundy-100 { background-color: var(--burgundy-100); }
+.bg-burgundy-200 { background-color: var(--burgundy-200); }
+.bg-burgundy-300 { background-color: var(--burgundy-300); }
+.bg-burgundy-400 { background-color: var(--burgundy-400); }
+.bg-burgundy-500 { background-color: var(--burgundy-500); }
+.bg-burgundy-600 { background-color: var(--burgundy-600); }
+.bg-burgundy-700 { background-color: var(--burgundy-700); }
+.bg-burgundy-800 { background-color: var(--burgundy-800); }
+.bg-burgundy-900 { background-color: var(--burgundy-900); }
+
+.border-burgundy-200 { border-color: var(--burgundy-200); }
+.border-burgundy-300 { border-color: var(--burgundy-300); }
+.border-burgundy-400 { border-color: var(--burgundy-400); }
+.border-burgundy-500 { border-color: var(--burgundy-500); }
+.border-burgundy-600 { border-color: var(--burgundy-600); }
+.border-burgundy-700 { border-color: var(--burgundy-700); }
+
+.hover\:bg-burgundy-600:hover { background-color: var(--burgundy-600); }
+.hover\:bg-burgundy-700:hover { background-color: var(--burgundy-700); }
+.hover\:bg-burgundy-800:hover { background-color: var(--burgundy-800); }
+.hover\:text-burgundy-700:hover { color: var(--burgundy-700); }
+.hover\:text-burgundy-800:hover { color: var(--burgundy-800); }
+
+/* Gold utility classes */
+.text-gold-50 { color: var(--gold-50); }
+.text-gold-100 { color: var(--gold-100); }
+.text-gold-200 { color: var(--gold-200); }
+.text-gold-300 { color: var(--gold-300); }
+.text-gold-400 { color: var(--gold-400); }
+.text-gold-500 { color: var(--gold-500); }
+.text-gold-600 { color: var(--gold-600); }
+.text-gold-700 { color: var(--gold-700); }
+.text-gold-800 { color: var(--gold-800); }
+.text-gold-900 { color: var(--gold-900); }
+
+.bg-gold-50 { background-color: var(--gold-50); }
+.bg-gold-100 { background-color: var(--gold-100); }
+.bg-gold-200 { background-color: var(--gold-200); }
+.bg-gold-300 { background-color: var(--gold-300); }
+.bg-gold-400 { background-color: var(--gold-400); }
+.bg-gold-500 { background-color: var(--gold-500); }
+.bg-gold-600 { background-color: var(--gold-600); }
+.bg-gold-700 { background-color: var(--gold-700); }
+.bg-gold-800 { background-color: var(--gold-800); }
+.bg-gold-900 { background-color: var(--gold-900); }
+
+.border-gold-200 { border-color: var(--gold-200); }
+.border-gold-300 { border-color: var(--gold-300); }
+.border-gold-400 { border-color: var(--gold-400); }
+.border-gold-500 { border-color: var(--gold-500); }
+.border-gold-600 { border-color: var(--gold-600); }
+.border-gold-700 { border-color: var(--gold-700); }
+
+.hover\:bg-gold-50:hover { background-color: var(--gold-50); }
+.hover\:bg-gold-100:hover { background-color: var(--gold-100); }
+.hover\:bg-gold-600:hover { background-color: var(--gold-600); }
+.hover\:bg-gold-700:hover { background-color: var(--gold-700); }
+.hover\:text-gold-600:hover { color: var(--gold-600); }
+.hover\:text-gold-700:hover { color: var(--gold-700); }
+
+/* Enhanced Document Type Selection Styles */
+.document-type-option {
+  transition: all 0.2s ease-in-out;
+}
+
+.document-type-option:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 35, 35, 0.15);
+}
+
+.document-type-option.selected {
+  border-color: var(--burgundy-500) !important;
+  background-color: var(--burgundy-50) !important;
+  box-shadow: 0 0 0 2px rgba(139, 35, 35, 0.2);
+}
+
+.document-type-option.selected .option-icon {
+  color: var(--burgundy-700) !important;
+}
+
+.document-type-option.selected .option-title {
+  color: var(--burgundy-800) !important;
+  font-weight: 600;
+}
